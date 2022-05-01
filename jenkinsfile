@@ -1,20 +1,18 @@
 pipeline{
-   agent any
+    agent any 
+     stages('CI') {
+         stage('checkout'){
+            steps{
+            echo 'Checkout'
+        }
+
+        stage('Build'){
+            steps{
+            //script 
+            echo 'checkout'
+        }
 
 
-   stages('CI'){
-       
-       stage('checkout'){
-           steps{
-               echo 'checkout '
-               checkout scm 
-           }
-       }
-
-       stage('Build'){
-           steps{
-               echo 'checkout '
-               
            }
        }
            stage('Test'){
@@ -28,3 +26,4 @@ pipeline{
 
 
 }
+
